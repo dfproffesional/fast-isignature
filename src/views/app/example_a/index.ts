@@ -1,3 +1,3 @@
-import a from './go/yo.js'
+import a from './go/yo'
 
 console.log('new', a);

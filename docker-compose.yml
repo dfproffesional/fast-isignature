@@ -10,6 +10,7 @@ services:
     working_dir: '/app'
     ports:
       - 3000:3000
+      - 8000:8000
     volumes:
       - ./:/app
       - $HOME/.gitconfig:/home/node/.gitconfig
