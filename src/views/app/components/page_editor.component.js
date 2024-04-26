@@ -1,3 +1,4 @@
+import HeaderComponent from "./header.component.js";
 
 export default class PageEditorComponent extends HTMLElement
 {
@@ -62,6 +63,7 @@ export default class PageEditorComponent extends HTMLElement
       html.innerHTML = data;
       
       this.switchHTML(html);
+      HeaderComponent.setRole();
     }
   }
 

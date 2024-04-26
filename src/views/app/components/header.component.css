@@ -1,0 +1,10 @@
+header-component header[role='disabled']{
+    ion-icon {
+        cursor: not-allowed;
+        opacity: .4;
+
+        &:hover{
+            background-color: unset;
+        }
+    }
+}
