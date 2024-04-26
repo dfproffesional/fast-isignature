@@ -1,2 +1,5 @@
+src/storage/upload/
+
 node_modules/
 .pnpm-store/
+.env

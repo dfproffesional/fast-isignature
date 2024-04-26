@@ -1,0 +1,38 @@
+- const {CLIENT_SERVER, ENV} = process.env
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title='F-Isignature'
+
+        //- CSS: Dependences
+        block css
+
+        //- JS: Dependences
+        script(src='/webroot/js/tailwind.min.js')
+        block head_script
+
+    body(style='margin:0')        
+        block content
+
+        span
+            //- JS: End Dependences
+            script(src='/vendor/axios/axios.min.js')
+            script(src='/vendor/jquery/jquery.min.js')
+            
+            script(type='module' src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js')
+            script(nomodule src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js')
+            
+            script(id='render_block').
+                Object.assign(Window.prototype, {
+                    _ENV_ISIGIN: {
+                        'CLIENT_SERVER': '#{CLIENT_SERVER}',
+                        'ENV': '#{ENV}'
+                    }
+                })
+                $('#render_block').remove()
+
+            block script
+
+        
