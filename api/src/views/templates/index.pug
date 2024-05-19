@@ -1,0 +1,14 @@
+extends layouts/default.pug
+
+block css 
+    style. 
+        body{
+            background-color: #333333;
+        }
+
+block content
+    header-component(class="sticky top-0 z-[1]")
+    page_editor-component
+
+block script
+    script(type='module' src='/app/editor.js')
